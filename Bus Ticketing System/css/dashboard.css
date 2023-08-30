@@ -1,0 +1,287 @@
+:root {
+    --background-color: #18181A;
+    --text-color: #fff;
+    --secondary-text-color: #000;
+    --primary-color: #D9DBF0;
+    --secondary-color: #3E50FA;
+    --other-color: #11DC93;
+    --primary-font: 'Inter';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    overflow: hidden;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.content {
+    padding: 22px;
+}
+
+.container {
+    height: 220px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    margin-top: 21px;
+    border-radius: 10px;
+}
+
+.container .grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+}
+
+.container .grid1 > div {
+    border: 1px solid var(--text-color);
+}
+
+.container .grid1 div:first-child {
+    grid-area: 1 / 1 / 2 / 3;
+    height: 129px;
+    cursor: pointer;
+}
+
+.container .grid1 div:first-child .to {
+    position: relative;
+    top: 14px;
+    left: 28px;
+    opacity: 0.5;
+}
+
+.container .grid1 div:first-child h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.container .grid1 div:first-child h4 {
+    text-align: center;
+    margin-top: 7px;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.container .grid1 div:nth-child(2),
+.container .grid1 div:last-child {
+    padding-top: 15px;
+}
+
+.distance,
+.arrival {
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.container .grid1 div h4 {
+    text-align: center;
+    font-weight: 800;
+}
+
+.container .grid1 div:nth-child(2) h4 {
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+
+.container .grid1 div:last-child h4 {
+    font-size: 12px;
+    color: var(--other-color);
+}
+
+.loc{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 12px;
+}
+
+#currLocation{
+    font-weight: bolder;
+}
+
+.two-boxes{
+    height: 100px;
+    width: 93%;
+    margin-left: 10px;
+}
+
+.two-boxes-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    height: 100%;
+}
+
+.two-boxes-grid > div{
+    width: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.two-boxes-grid > div:first-child{
+    border: 1px solid var(--secondary-color);
+    padding-top: 8px;
+}
+
+.two-boxes-grid > div:last-child{
+    border: 1px solid var(--other-color);
+}
+
+.two-boxes-grid > div:first-child h4{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.two-boxes-grid > div:last-child h4{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 900;
+    color: var(--other-color);
+    margin-top: 9px;
+}
+
+.sun{
+    margin-top: 23px;
+    font-weight: lighter;
+    font-size: 10px;
+    opacity: 0.5;
+    text-transform: capitalize;
+}
+
+.temp{
+    font-weight: lighter;
+    font-size: 10px;
+    margin-top: 7px;
+    opacity: 0.5;  
+}
+
+.date-con{
+    float: right;
+}
+
+.time-con{
+    float: right;
+}
+
+.label{
+    margin-top: 8vh;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+input{
+    height: 48px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.btn {
+    height: 48px;
+    width: 90%;
+    border-radius: 5px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 11.3%;
+    left: 16px;
+}
+
+.btn h1 {
+    color: var(--background-color);
+    font-size: 1rem;
+}
+
+.footer {
+    height: 65px;
+    border-top: 1px solid var(--text-color);
+    color: var(--text-color);
+    position: fixed;
+    top: 90%;
+    width: 100%;
+}
+
+.footer .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+
+.footer .grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grid .footer-item img {
+    width: 35px;
+    height: 25px;
+    margin-top: 6px;
+}
+
+.footer .grid .footer-item p {
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.footer .grid .footer-item:first-child img{
+    height: 28px;
+    margin-bottom: 14px;
+    position: relative;
+    top: 8px;
+}
+
+.footer .grid .footer-item:nth-child(2) img {
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.footer .grid .footer-item:nth-child(2) p {
+    font-size: 10px;
+}
+
+.footer .grid .footer-item:last-child img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.footer .grid .footer-item:last-child p {
+    font-size: 10px;
+}
+
+

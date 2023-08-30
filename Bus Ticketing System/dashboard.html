@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div class="content">
+        <h3>Real Time Updates</h3>
+        <div class="container">
+            <div class="grid1">
+                <div class="destination-info" onclick="openOverlay()">
+                    <h5 class="to">Next Bus Stop</h5>
+                    <h1 id="destination">Malbago</h1>
+                    <h4 id="province">Daanbantayan</h4>
+                </div>
+                <div class="info">
+                    <h1 id="distance" class="distance">0 km</h1>
+                    <h4>Est. Distance</h4>
+                </div>
+                <div class="info">
+                    <h1 id="arrival" class="arrival">0</h1>
+                    <h4>Est. Arrival Time</h4>
+                </div>
+            </div>
+
+            <p class="loc">We are currently at <span id="currLocation"></span></p>
+
+            <div class="two-boxes">
+                <div class="two-boxes-grid">
+                    <div>
+                        <h1 id="passengers">20</h1>
+                        <h4>Passengers <br> onboard</h4>
+                    </div>
+                    <div>
+                        <h1 id="passengers">30 kph</h1>
+                        <h4>Bus Speed</h4>
+                    </div>
+                </div>
+
+                <p class="sun">Weather: <span id="weather"></span> <span class="date-con">Date: <span id="date"></span></span></p>
+                <p class="temp">Temperature: <span id="temperature"></span> <span class="time-con">Time: <span id="time"></span></span></p>
+
+
+                <p class="label">Input specific place (optional)</p>
+                <input type="text">
+            </div>
+
+        </div>
+
+        
+
+        <div onclick="printTicket()" class="btn">
+            <h1>Remind Driver</h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="grid">
+            <div class="footer-item">
+                <img src="images/dashboard.png" alt="">
+                <p>Dashboard</p>
+            </div>
+            <div class="footer-item">
+                <img src="images/ticket.png" alt="">
+                <p>Ticketing</p>
+            </div>
+            <div class="footer-item">
+                <img src="images/loading_screen-removebg-preview.png" alt="">
+                <p>Profile</p>
+            </div>
+        </div>
+
+        <script src="js/geolocation.js"></script>
+        <script src="js/widget.js"></script>
+</body>
+</html>
